@@ -1,118 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+    <title>Document</title>
 <style>
 
 
 
-  
-    img {
-        padding-left: 40vw;
-        width: 60%;
-        height: 60%;
+
+  * {
+    box-sizing: border-box;
+ }
+
+
+
+
+h1 {
+    font-family: 'Vollkorn', serif; 
+    font-weight: 100;
+    font-size: 2vh;
+    min-width: 50%;
+    padding-left:  5vh;
+    padding-right: 5vh;
+    line-height: 2,5vh;
     
-    } 
-
-    img:hover {
-        transform: rotateX(300deg); 
-        transition-duration:14s; 
-
-    }
-
-    #img {transition-timing-function: ease-out;}
-
-
-    body {
-        
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 2vh;
-        line-height: 2,5vh;
-        background-color: rgb(214, 214, 214);
-        padding-left: 3vw;
-        padding-top: 2vw;
-        
-        
-   
-
-    } 
-    h1 {
-        font-family: 'Times New Roman', Times, serif;
-        color: black;
-        
-        
-        
-    }
     
-    p {
-            font-size: 2vh;
-            text-align: left;
-            line-height: 2,5vh;
-           
+}
+
+body {
+    display: block;
+    margin-right: 10vh;
+    font-family: 'Vollkorn', serif;
+    font-size: 2vh;
+    min-width: 100%;
+    background: linear-gradient(
+    to right, 
+    #ffffff 0%, 
+    #ffffff 50%, 
+    #ffffff 50%, 
+    #ffffff 100%
+  );
+  text-shadow: #000000 10px 10px 50px;
+
+}
+
+ .w3-row {    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 1vh;
+    min-width: 20vh;
+    word-wrap: break-word;
+ }
+
+.w3-col m8 l9 {
+    color: azure;
+    
+ }
+
+
+ /* kaflar */
+
+
+
+
+
+.hidden {
+    display: none;
+    position:left;
+    opacity:0;
+    transition:0s 180s;
+    background-color: #ffffff;
+
             
-    }
+        }
 
-    a {
-        text-indent: 10px;
-        color: rgb(0, 0, 0);
-        font-size: 2vh;
-        text-shadow: 0 0 50px rgb(255, 0, 221);
-    }
+.hidden :hover {
+ 
+flex: 1;
+  
+}        
+.parent  {
+  line-height:10vh;
+    font-size:1vh;
+    color:black;
+    transition:0s 180s;
+}
+.parent:hover {
+  box-shadow: #000000 0px 0px 50px;
 
-    p1 {
-        font-family: Arial, Helvetica, sans-serif;
-        text-shadow: 0 0 30px rgb(255, 0, 234); 
-        font-size: 2vh;
-        font-weight: medium;
-      } 
+}
+.parent:hover .hidden {
+            display: block;
+            opacity:1;
+            transition:0s;
+            color: rgb(0, 0, 0);
+            font-size:1vh;
+            line-height: 3vh;
+            transition:0;
+            margin-left: 3vh;
+            margin-right: 1vh;
+        }
 
 
-
-
-        
+img {
+    width: 150vh;
+    height: auto;
+    max-height: 150vh;
+    max-width: 150vh;
+  
     
-     
+}
 
+.item {
+    width: 120vh;
+    height: 120vh;
+    height: auto;
+    float: left;
+    margin: 1vh;
+    padding: 3px;
+}
+
+
+.btn-info {
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    border: none;
+    padding-left: 10vh;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    
+}
+
+.btn {
+    border-radius: 1vw;
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)); 
+    stroke-opacity: 0px;
+    stroke: none;
+    outline: none;
+    width: 0,5vh;
+    height:0,5vh;
+    text-align: center;
+    margin-right: 20vh;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    margin-top: 1rem;
+    margin-right: 10vh;
+  
+    
+
+    
+    
+}
+
+.btn:hover {
+    background-image: linear-gradient(to top, rgb(237, 220, 228), rgb(241, 247, 255));
+    stroke-opacity: 0px;
+    stroke: none;
+}
+
+.btn:active {
+    margin: 1vw 1vw 0;
+    box-shadow: 0px 0px 1px #000;
+    stroke-opacity: 0px;
+    stroke: none;
+}
+
+
+
+    
+    
+  
+  
+img {
+  width: 100vh;
+  height: auto;
+    max-height: 100vh;
+    max-width: 30vh;
+    object-fit:cover;
+    max-width: 100%;
+    height: auto;
+    
+}
+  
+
+.logo {
+  width: 25vh;
+  height: auto;
+  padding-left: 20;
+}
+
+.logo :hover {
+  transform: rotateX(360deg);
+  transition-duration: 10s;
+  transition-delay: ease-out;
+
+}
+
+.stuff {
+  position: relative;
+ 
+}
+
+
+.image {
+  min-height: 25vh;
+  min-width: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .12s ease ease-out;
+  float: left;
+ 
+
+  
+}
+
+.container:hover .overlay {
+  opacity: 100%;
+  
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 1rem;
+  position:absolute ;
+  float: left;
+  top: 87%;
+  left: 47%;
+  transform: translate(-80%, -60%);
+  -ms-transform: translate(-90%, 90%);
+ 
+  
+}
+
+.grid2 {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: 0,5vh;
+  
+} 
+
+.scanrj {
+  height: 70vh;
+  width: auto;
+}
+@media (min-width: 25vh) {
+
+.grid {
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-gap: 1vh;
+    padding: 1vh }
+
+
+}
+
+.grid2 {
+  padding-bottom: 10; 
+
+ } 
+
+.Mail :hover {
+  text-shadow: 2px 2px 4px #000000;
+  color: #000;
+  
+}
+
+a {
+  color: #000;
+  
+}
+
+
+.grid3 {
+ grid-template-columns: 1fr;
+ display: grid;
+  grid-gap: 1vh;
+  width: 80vh;
+  height: 110vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(237, 220, 228);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 </style>
 
 </head>
 <body>
+
+    <h1>   
+        <div class="w3-row">  
+            <div class="w3-col m4 l3">
+              <p><i> Sigga Hannesdóttir</i></p>
+            </div>
+
+          <a href="mailto:siggahh9@gmail.com">
+            <div class="Mail">
+              <p><i> Mail
+              </i>
+            </div>
+          </a>
+          <div class="w3-col m8 l9">
+            <p><i> Graphic designer 
+            </i>
+          </div>
+          <div class="dropdown">
+            <span>Info</span>
+            <div class="dropdown-content">
+              <br>
+              <p>Sigga Hannesdóttir is an Icelandic graphic designer based in Amsterdam Netherlands. <br>
+                She graduated in 2022 from the <i> Graphic Design Department</i>  of the Gerrit Rietveld Academie.
+                <br> </p>
+            </div>
+          </div>
+    </h1>
+ <div class="heading">
+
+<div class="title1">
+ 
+ </div>
+</div>
+<div class="container">
+  <a href="#demo3" class="btn btn-info" data-toggle="collapse">Studium Generale: <i>Oceanic Imaginaries</i></a>
+  <div id="demo3" class="collapse">
+
+    <br><i>@oceanicimaginaries</i>  <br>
+   <br><i> https://oceanicimaginaries.rietveldacademie.nl </i> <br>
     
-<div= class="parent">
-        <div= class="child"></div>
-        </div>
-
-    <p1>
-        Sigga Hannesdóttir
-
-    </p1>
-    <p>
-
-    </p>
-    <p>
-       
-
+    <br>  Visual Identity and Online Communication developed with Martina Vanini and Melanie Cot on the theme <i> Oceanic Imaginaries</i> <br>for Studium Generale,
+   a transdisciplinary theory programme at The Gerrit Rietveld Academie. <br>
     
-        <p>
-            <i> Graphic Designer based in Amsterdam, Netherlands.</i>
-            <br>Enquiries and extended portfolio please contact via <a href="mailto:siggahh9@gmail.com">email</a> or +3548660687<br> 
-         </p>
+    
+    <br> Posters, flyers and online communication and curation of social media content. <br>
+    <br>
+    Font in use:  Inter <br>
+<p>
 
-     <img src="logo.svg" alt="logo">
-     
-   
-     
+<div class="grid">
+
+  <div class="stuff">
+    <img src="studium.JPG" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text"> </div>
+    </div>
+  </div>
+  Programme booklet for Oceanic Imaginaries Conference festival.
+  <div class="stuff">
+    <img src="IMG_6501.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text"> </div>
+    </div>
+  </div>
+  <img src="catalog.jpg" alt="Avatar" class="image">
+  <p>
+  Exhibition Catalog for <i>Rietveld Uncut: Oceanic Imaginaries </i> at The Stedelijk Museum Amsterdam 
+</p>
+  <div>
+
+  </div>
+  <div class="stuff">
+    <p><img src="facebookeevent2.jpg" alt="Avatar" class="gif"></p>
+    <div class="overlay">
+      <div class="text"> </div>
+    
+    </div>
+  </div>
+  <img src="signage.jpg" alt="Avatar" class="image">
+
+<p>
+  Signage at the Stedelijk Museum Amsterdam for <i>Rietveld Uncut: Oceanic Imaginaries</i>  photos by Jordi de Vetten. 
+</p>
+<a href="ocean.html">
+  <div class="stuff">
+    <img src="IMG_6485.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      
+    </div>
+  </div>
+
+  <img src="lexiconscan2 copy.png" alt="Avatar" class="image">
+</a>
+<p>
+Cover design and layout for<i> Oceanic Imaginaries: Lexicon </i>  
+</p>
+
+
+<img src="Scan 13 copy.png" alt="Avatar" class="image">
+
+  <div class="stuff">
+    <img src="Scan 25 copy.png" alt="Avatar" class="image">
+    <div class="overlay">
+      
+    </div>
+    <img src="Scan 103.png" alt="Avatar" class="image">
+    </div>
+
+  </div>
+
+  Design and layout of Oceanic Imaginaries Reader 
+  <br>
+  <br>
+ <p>
+  <img src="billboaard.jpg" alt="Avatar" class="image">
+</p> 
+Billboard printed in natural inks, using leftover paper
+<br>
+<br>
+
+
+<p>
+  <img src="IMG_6553 copy.jpg" alt="Avatar" class="image">
+
+</p> 
+Lasercut seaweed bookmarks
+<br>
+<br>
+
+<p>
+  <img src="program poster.jpg" alt="Avatar" class="image">
+
+</p> 
+Monthly program poster riso print
+<br>
+<br>
+
 
 
 </div>
+</div>
 
+
+
+
+  </div>
+  </div>
+</div>
+
+<div class="container">
+  <a href="#demo4" class="btn btn-info" data-toggle="collapse"><i>Cringe, Anxiety, Envy, Irritation, Humiliation,  <br> Embarrassment, Denial, Defensiveness <br> The Arrogant Self Critic <br></i></a>
+  <div id="demo4" class="collapse">
+
+   <br><p>
+  BA Thesis and design: An essay on 'neurosis' in artistic practice. Written, designed and printed at the Gerrit Rietveld Academie.
+<br>
+<br>
+  Fonts in use: 
+  <br> FELL Great Primer
+  <br> Helvetica Neue
+</p>
+  <div class="grid">
+    <img id="scan97" onclick="changeimage" src="Scan 97 copy.jpg" alt="">
+    <img src="Scan 82.png" alt="">
+    <img src="Scan 85.png" alt="">
+
+    <img src="Scan 37.jpeg" alt="">
+ 
+
+  </div>
+</div>
+ <div class="container">
+  <a href="#demo5" class="btn btn-info" data-toggle="collapse"><i>Rietveld Journal #4</i>
+  </a>
+  <div id="demo5" class="collapse">
+  
+
+              <p><br> Identity design and editorial of <i> Rietveld Journal #4</i> with Victoria Hoogstoel  and Hyoyoung Chu </p>
+
+               <p><i>Rietveld Journal #4</i> was published in October 2021.
+                It is a student-run journal for poems, essays, fiction, interviews, notes, puzzles, drawings, collages, pictures — any printed matter. It is distributed for free at the Rietveld Academie and beyond internationally.</p>
+    
+  <div class="grid">
+   
+   
+
+    <img src="rj.jpg" alt="">
+    <div class="grid2">
+    <img src="Scan 155.png" class="scanrj">
+    <img src="Scan 153.png" class="scanrj">
+
+    </div>
+    
+
+  </div>
+</div> 
+
+<div class="container">
+  <a href="#demo6" class="btn btn-info" data-toggle="collapse"><i>Sorry Sentences</i></a>
+  <div id="demo6" class="collapse">
+
+<br>
+<br>
+Diploma work at the Gerrit Rietveld Academie. 
+<br>
+
+<br>80page A3 Newspaper print
+<br>
+<br>Series of  5  short stories  on the topic of apologetic personalities.  Written by me from the year 2020-2022. <br> Illustrated with associative images from my personal archive and photography. 
+<br>
+<br> Fonts in use: 
+<br> Helvetica Neue Bold Condensed
+<br>
+<br>
+<br>
+<div class="grid2">
+
+    <img src="Scan 115.jpg" alt="">
+    <img src="Scan 107.png" alt="">
+</div>
+<br>
+ <p>
+<img src="sorry2.jpg" alt="">
+</p>  
+
+    <img src="sorry1.jpg" alt=""> 
+<br>
+<br>
+    
+
+
+
+
+  
+</div>
+
+</div>
+</div>
+
+
+
+<!-- 
+
+
+
+<div class="container">
+  <a href="#demo8" class="btn btn-info" data-toggle="collapse"><i>Floating Aquaculture! It Creates Jobs!</i></a>
+  <div id="demo8" class="collapse">
+
+        
+    
+  <div class="grid">
+
+    <img src="floating.jpg" alt="">
+   
+    <!-- <img src="sorry1.jpg" alt=""> -->
+
+    
+
+
+ 
+
+  </div>
+</div>
+<!-- 
+</div>
+
+                        <div class="container">
+                          <a href="#demo9" class="btn btn-info" data-toggle="collapse"><i>DIY-Mixtape Workshop and Issue zero</i></a>
+                          <div id="demo9" class="collapse">
+
+                                
+                            
+                          <div class="grid">
+
+                            <img src="floating.jpg" alt="">
+                          
+                            <!-- <img src="sorry1.jpg" alt=""> -->
+
+                            
+
+
+                        
+
+                          </div>
+                        </div>
+
+</div> 
+
+
+<div class="container">
+  <a href="#demo10" class="btn btn-info" data-toggle="collapse"><i>Prints</i></a>
+  <div id="demo10" class="collapse">
+
+  <br>
+        
+ <div class="grid3">
+  <br>
+<img src="shoes.jpg" class="shoes" alt="">
+<p>Print in collaboration with artist Rebecka Hultman</p>
+<img src="goose.jpg" class="goose" alt="">
+
+
+<img src="newsproof1 copy.jpg" alt="">
+</div>
+
+  </div>
+</div>
+<p></p>
+<div class="logo">
+ 
+ 
+  </div>
+
+  <div class="logo">
+
+  </div>  
+
+  <div class="logo">
+    <img src="logo.svg" alt="">
+       </div>  
+   </div>
+   
+  <script>
+  </script> 
+
+    </body>
+    </html>
 </body>
 </html>
